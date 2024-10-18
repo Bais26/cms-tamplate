@@ -1,5 +1,5 @@
 import { lazy, Suspense, ReactElement, PropsWithChildren } from 'react';
-import { Outlet, RouteObject, RouterProps, createBrowserRouter } from 'react-router-dom';
+import { Outlet, RouteObject, createBrowserRouter } from 'react-router-dom';
 
 import PageLoader from 'components/loading/PageLoader';
 import Splash from 'components/loading/Splash';
@@ -76,6 +76,7 @@ const options: { basename: string } = {
   basename: '/nickelfox',
 };
 
-const router: Partial<RouterProps> = createBrowserRouter(routes, options);
+// Hapus `Partial<RouterProps>`
+const router = createBrowserRouter(routes, options);
 
 export default router;
