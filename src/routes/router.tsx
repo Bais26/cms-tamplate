@@ -72,11 +72,11 @@ const routes: RouteObject[] = [
   },
 ];
 
-const options: { basename: string } = {
+const options = {
   basename: '/nickelfox',
 };
 
-// Hapus `Partial<RouterProps>`
+// Pastikan router bukan Partial
 const router = createBrowserRouter(routes, options);
 
 export default router;
